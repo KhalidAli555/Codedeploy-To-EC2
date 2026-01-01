@@ -5,16 +5,13 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies"
+      - npm install -g npm@9
       - npm install
 
   build:
     commands:
-      - echo "Building application"
-      - npm run build
-      - echo "Build completed"
+      - echo "Node.js app ready for deployment"
 
 artifacts:
-  base-directory: build
   files:
     - '**/*'
